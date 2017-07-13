@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TODOS } from '../mocks/todos';
+import { Todo } from '../models/todo';
+
 
 @Injectable()
 export class TodoService {
@@ -8,6 +10,10 @@ export class TodoService {
 
   getTodos() {
     return TODOS;
+  }
+
+  addTodo(todo: Todo) {
+    TODOS.push(todo);
   }
 
 }

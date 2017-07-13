@@ -1,5 +1,5 @@
 <div class="todoapp-list">
-  <input class="new-todo" type="text" placeholder="Enter todo here" value>
+  <input class="new-todo" type="text" placeholder="Enter todo here" value [(ngModel)]="todoInput" (keyup.enter)="addTodo()">
   <ul class="todo-list">
     <li *ngFor="let todo of todos">
       <div class="view">
