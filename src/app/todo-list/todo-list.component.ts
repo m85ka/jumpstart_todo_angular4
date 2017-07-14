@@ -25,12 +25,4 @@ export class TodoListComponent implements OnInit {
     }
   }
 
-  removeTodo(todoId: number) {
-    this.todoService.removeTodo(todoId);
-  }
-
-  getCount() {
-    return this.todoService.getRemaining().length;
-  }
-
 }

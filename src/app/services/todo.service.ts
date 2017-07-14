@@ -20,13 +20,4 @@ export class TodoService {
     TODOS.push(todo);
     this.currentId++;
   }
-
-  getRemaining(): Todo[]{
-    return TODOS.filter( todo => !todo.isDone );
-  }
-
-  removeTodo(todoId: number) {
-    console.log(todoId);
-  }
-
 }
