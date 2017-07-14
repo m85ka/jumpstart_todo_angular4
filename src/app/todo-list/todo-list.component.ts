@@ -20,10 +20,17 @@ export class TodoListComponent implements OnInit {
 
   addTodo(){
     if( this.todoInput ) {
-      let todo = new Todo(this.todoInput);
-      this.todoService.addTodo( todo )
+      this.todoService.addTodo( this.todoInput );
       this.todoInput = "";
     }
+  }
+
+  removeTodo(todoId: number) {
+    this.todoService.removeTodo(todoId);
+  }
+
+  getCount() {
+    return this.todoService.getRemaining().length;
   }
 
 }

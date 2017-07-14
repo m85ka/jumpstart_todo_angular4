@@ -1,7 +1,10 @@
 export class Todo {
+  id: number
   name: String
+  isDone: boolean = false
 
-  constructor(name: String) {
+  constructor(id: number, name: String) {
+    this.id = id;
     this.name = name;
   }
 }

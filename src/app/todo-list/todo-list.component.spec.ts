@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TodoListComponent } from './todo-list.component';
+import { FormsModule } from '@angular/forms';
+import { TodoService } from '../services/todo.service';
 
 describe('TodoListComponent', () => {
   let component: TodoListComponent;
@@ -8,7 +9,11 @@ describe('TodoListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoListComponent ]
+      declarations: [ TodoListComponent ],
+      imports: [
+        FormsModule
+      ],
+      providers: [TodoService]
     })
     .compileComponents();
   }));
@@ -22,4 +27,6 @@ describe('TodoListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+
 });

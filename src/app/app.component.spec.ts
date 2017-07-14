@@ -1,13 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+
+import { FormsModule } from '@angular/forms';
+
+import { TodoService } from './services/todo.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        TodoListComponent
       ],
+      imports: [
+        FormsModule
+      ],
+      providers: [TodoService]
     }).compileComponents();
   }));
 
@@ -27,6 +37,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!!');
+    expect(compiled.querySelector('h1').textContent).toContain('JS-Todos');
   }));
 });

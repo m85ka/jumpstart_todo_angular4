@@ -1,7 +1,7 @@
 import { Todo } from '../models/todo';
 
 export let TODOS: Todo[] = [
-  {"name": "Learn typescript"},
-  {"name": "Learn angular"},
-  {"name": "Do some great stuff"},
+  {"id": 1, "name": "Learn typescript", "isDone": false},
+  {"id": 2, "name": "Learn angular", "isDone": true},
+  {"id": 3, "name": "Do some great stuff", "isDone": false},
 ]
